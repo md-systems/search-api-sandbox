@@ -275,7 +275,7 @@ class Utility {
       }
     }
     else {
-      $field->addValue(reset($value));
+      $field->addValue($value);
     }
     $field->setOriginalType($definition->getDataType());
   }
