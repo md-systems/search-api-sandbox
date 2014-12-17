@@ -377,7 +377,8 @@ class Utility {
       }
     }
     else {
-      $value = reset($value);
+      // $value = reset($value);
+      $field->addValue($value);
     }
 
     // If the data type of the field is a custom one, then the value can be
