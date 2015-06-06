@@ -168,7 +168,7 @@ class SearchApiRow extends RowPluginBase {
         $form['view_modes'][$datasource_id][$bundle_id] = array(
           '#type' => 'select',
           '#options' => $view_modes,
-          '#title' => $this->t('View mode for bundle %name', array('%name' => $bundle['label'])),
+          '#title' => $this->t('View mode for bundle %name', array('%name' => $bundle)),
           '#default_value' => key($view_modes),
         );
         if (isset($this->options['view_modes'][$datasource_id][$bundle_id])) {
