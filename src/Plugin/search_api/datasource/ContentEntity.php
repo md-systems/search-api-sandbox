@@ -470,7 +470,7 @@ class ContentEntity extends DatasourcePluginBase {
     if ($configuration['default']) {
       $bundles = $this->getEntityBundles();
       foreach ($configuration['bundles'] as $config_bundle) {
-        if (isset($bundles[$config_bundle])) {
+        if (!empty($bundles[$config_bundle])) {
           unset($bundles[$config_bundle]);
         }
       }
@@ -479,7 +479,7 @@ class ContentEntity extends DatasourcePluginBase {
     else {
       $bundles = $configuration['bundles'];
       foreach ($bundles as $bundle_key => $bundle_value) {
-        if ($bundle_value === 0) {
+        if (empty($bundle_value)) {
           unset($bundles[$bundle_key]);
         }
       }
