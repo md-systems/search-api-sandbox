@@ -200,7 +200,7 @@ abstract class SearchApiFilterEntityBase extends SearchApiFilter {
     elseif ($this->operator === 'not empty') {
       $this->query->condition($this->realField, NULL, '<>', $this->options['group']);
     }
-    elseif (is_array($this->value)) {
+    elseif (is_array($this->value) && $this->value) {
       $all_of = $this->operator === 'all of';
       $operator = $all_of ? '=' : $this->operator;
       if (count($this->value) == 1) {
